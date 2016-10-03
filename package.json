@@ -1,5 +1,5 @@
 {
-  "name": "checkin-rest-server",
+  "name": "emergencyCheck",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -34,7 +34,6 @@
     "karma-jasmine": "^0.3.6",
     "karma-phantomjs-launcher": "^0.2.1",
     "mongoose": "^4.4.11",
-    "mongoose-currency": "^0.2.0",
     "morgan": "~1.6.1",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
