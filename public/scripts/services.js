@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('emergencyCheck')
-.constant("baseURL", "http://localhost/")
+.constant("baseURL", "https://localhost:3443/")
 .factory('studentFactory', ['$resource', 'baseURL', function ($resource, baseURL) {
 
 

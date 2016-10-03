@@ -15,7 +15,7 @@ staffRouter.route('/')
             res.json(staff);
         });
     })
-    .post(Verify.verifyOrdinaryUser, Verify.verifyAdmin, function(req, res, next) {
+    .post(function(req, res, next) {
         Staffs.create(req.body, function(err, staff) {
             if (err) next(err);
             console.log('Staff created!');
@@ -26,7 +26,7 @@ staffRouter.route('/')
             res.end('Added the staff with the id: ' + id);
         });
     })
-    .delete(Verify.verifyOrdinaryUser, Verify.verifyAdmin, function(req, res, next) {
+    .delete(function(req, res, next) {
         Staffs.remove({}, function(err, resp) {
             if (err) next(err);
             res.json(resp);
@@ -40,7 +40,7 @@ staffRouter.route('/:staffId')
             res.json(staff);
         });
     })
-    .put(Verify.verifyOrdinaryUser, Verify.verifyAdmin, function(req, res, next) {
+    .put(function(req, res, next) {
         Staffs.findByIdAndUpdate(req.params.staffId, {
             $set: req.body
         }, {
@@ -50,7 +50,7 @@ staffRouter.route('/:staffId')
             res.json(staff);
         });
     })
-    .delete(Verify.verifyOrdinaryUser, Verify.verifyAdmin, function(req, res, next) {
+    .delete(function(req, res, next) {
         Staffs.findByIdAndRemove(req.params.staffId, function(err, resp) {
             if (err) next(err);
             res.json(resp);
