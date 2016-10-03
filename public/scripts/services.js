@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('emergencyCheck')
-.constant("baseURL", "https://emergency-checkin.herokuapp.com/")
+.constant("baseURL", "https://localhost/")
 .factory('studentFactory', ['$resource', 'baseURL', function ($resource, baseURL) {
 
 
